@@ -1,5 +1,7 @@
 # AgentDeck
 
+<img src="assets/agentdeck-icon.png" alt="AgentDeck icon" width="128">
+
 AgentDeck is a compact 540 × 400 native macOS whiteboard for subagents in existing Codex main chats.
 
 ## Open AgentDeck
