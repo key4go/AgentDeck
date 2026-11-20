@@ -1,0 +1,16 @@
+.DS_Store
+.build/
+DerivedData/
+xcuserdata/
+
+# Local development notes and historical mockups
+/AGENTS.md
+/MASTER_PROMPT.md
+/docs/ARCHITECTURE.md
+/docs/AUDIT.md
+/docs/CODEX_CAPABILITIES.md
+/docs/DECISIONS.md
+/docs/PROGRESS.md
+/docs/ROADMAP.md
+/docs/SKILLS_POLICY.md
+/docs/images/

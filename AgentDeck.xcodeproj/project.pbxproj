@@ -1,0 +1,49 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		AD0000000000000000000092 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration/LocalWebSocket.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000E2 = { isa = PBXBuildFile; fileRef = AD0000000000000000000092; };
+		AD0000000000000000000023 = { isa = PBXFileReference; lastKnownFileType = image.icns; path = AgentDeck.icns; sourceTree = "<group>"; };
+		AD0000000000000000000024 = { isa = PBXBuildFile; fileRef = AD0000000000000000000023; };
+		AD0000000000000000000091 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI/WorkflowCanvas.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000E1 = { isa = PBXBuildFile; fileRef = AD0000000000000000000091; };
+		AD0000000000000000000090 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Domain/Workflow.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000E0 = { isa = PBXBuildFile; fileRef = AD0000000000000000000090; };
+		AD0000000000000000000064 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Domain/Deck.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000C8 = { isa = PBXBuildFile; fileRef = AD0000000000000000000064; };
+		AD0000000000000000000066 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI/AgentDeckApp.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000CA = { isa = PBXBuildFile; fileRef = AD0000000000000000000066; };
+		AD0000000000000000000068 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI/DeckWindow.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000CC = { isa = PBXBuildFile; fileRef = AD0000000000000000000068; };
+		AD0000000000000000000001 = { isa = PBXProject; buildConfigurationList = AD0000000000000000000009; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; knownRegions = (en, Base); mainGroup = AD0000000000000000000002; productRefGroup = AD0000000000000000000004; projectDirPath = ""; targets = (AD0000000000000000000006,); };
+		AD0000000000000000000002 = { isa = PBXGroup; children = (AD0000000000000000000003, AD0000000000000000000004, AD000000000000000000001E,); sourceTree = "<group>"; };
+		AD0000000000000000000003 = { isa = PBXGroup; children = (AD0000000000000000000092, AD0000000000000000000064, AD0000000000000000000091, AD0000000000000000000090, AD0000000000000000000066, AD0000000000000000000068, AD000000000000000000000F, AD0000000000000000000078, AD0000000000000000000079, AD000000000000000000007A, AD0000000000000000000021, AD0000000000000000000023,); path = AgentDeck; sourceTree = "<group>"; };
+		AD0000000000000000000004 = { isa = PBXGroup; children = (AD0000000000000000000005,); name = Products; sourceTree = "<group>"; };
+		AD0000000000000000000005 = { isa = PBXFileReference; explicitFileType = wrapper.application; path = AgentDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0000000000000000000006 = { isa = PBXNativeTarget; buildConfigurationList = AD000000000000000000000A; buildPhases = (AD0000000000000000000007, AD0000000000000000000008, AD0000000000000000000020,); buildRules = (); dependencies = (); name = AgentDeck; productName = AgentDeck; productReference = AD0000000000000000000005; productType = "com.apple.product-type.application"; };
+		AD0000000000000000000007 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (AD00000000000000000000E2, AD00000000000000000000C8, AD00000000000000000000E1, AD00000000000000000000E0, AD00000000000000000000CA, AD00000000000000000000CC, AD00000000000000000000DC, AD00000000000000000000DD, AD00000000000000000000DE,); runOnlyForDeploymentPostprocessing = 0; };
+		AD0000000000000000000008 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		AD000000000000000000000B = { isa = XCBuildConfiguration; buildSettings = { MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		AD000000000000000000000C = { isa = XCBuildConfiguration; buildSettings = { MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_COMPILATION_MODE = wholemodule; }; name = Release; };
+		AD000000000000000000000D = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "-"; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = AgentDeck/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = org.agentdeck.app; PRODUCT_NAME = AgentDeck; SWIFT_VERSION = 6.0; }; name = Debug; };
+		AD000000000000000000000E = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "-"; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = AgentDeck/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = org.agentdeck.app; PRODUCT_NAME = AgentDeck; SWIFT_VERSION = 6.0; }; name = Release; };
+		AD0000000000000000000009 = { isa = XCConfigurationList; buildConfigurations = (AD000000000000000000000B, AD000000000000000000000C,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		AD000000000000000000000A = { isa = XCConfigurationList; buildConfigurations = (AD000000000000000000000D, AD000000000000000000000E,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		AD000000000000000000000F = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0000000000000000000078 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration/AppServer.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000DC = { isa = PBXBuildFile; fileRef = AD0000000000000000000078; };
+		AD0000000000000000000079 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration/CodexRecords.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000DD = { isa = PBXBuildFile; fileRef = AD0000000000000000000079; };
+		AD000000000000000000007A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services/WorkspaceStore.swift"; sourceTree = "<group>"; };
+		AD00000000000000000000DE = { isa = PBXBuildFile; fileRef = AD000000000000000000007A; };
+		AD000000000000000000001E = { isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AD000000000000000000001F = { isa = PBXBuildFile; fileRef = AD000000000000000000001E; };
+		AD0000000000000000000020 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (AD000000000000000000001F, AD0000000000000000000022, AD0000000000000000000024,); runOnlyForDeploymentPostprocessing = 0; };
+		AD0000000000000000000021 = { isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		AD0000000000000000000022 = { isa = PBXBuildFile; fileRef = AD0000000000000000000021; };
+	};
+	rootObject = AD0000000000000000000001;
+}

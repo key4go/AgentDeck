@@ -1,0 +1,28 @@
+name: macOS build and checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build Xcode app
+        run: xcodebuild -project AgentDeck.xcodeproj -target AgentDeck -configuration Release -quiet CODE_SIGN_IDENTITY=-
+      - name: Run foundation and App Server checks
+        run: |
+          bash Tools/check-foundation.sh
+          bash Tools/check-integration.sh
+      - name: Build and verify local app bundle
+        run: |
+          bash Tools/build-app.sh
+          codesign --verify --strict .build/AgentDeck.app
