@@ -27,7 +27,7 @@ struct CompactWhiteboard: View {
                     }.font(.caption).foregroundStyle(DeckStyle.primaryText).disabled(!store.chatAttached(chatID))
                         .help("Add a reported subagent from this chat")
                 }.padding(.horizontal, 12).padding(.vertical, 8)
-            .background(DeckStyle.chrome)
+            .background(DeckStyle.pickerChrome)
             .overlay(alignment: .top) { Rectangle().fill(.white.opacity(0.04)).frame(height: 1) }
             Divider().overlay(DeckStyle.line)
             GeometryReader { geometry in
@@ -35,7 +35,7 @@ struct CompactWhiteboard: View {
                 let boardSize = CGSize(width: geometry.size.width, height: max(geometry.size.height, CGFloat((profiles.count + 2) / 3 * 120 + 12), (profiles.compactMap(\.positionY).max() ?? 0) + cardSize.height))
                 ScrollView(.vertical) {
                 ZStack(alignment: .topLeading) {
-                    DeckStyle.background
+                    Color.clear
                     if store.profiles(inChat: chatID).isEmpty {
                         VStack(spacing: 6) {
                             Image(systemName: "square.on.square.dashed").font(.title2)

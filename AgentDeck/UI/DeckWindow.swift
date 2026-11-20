@@ -13,9 +13,27 @@ enum DeckStyle {
 
     static var chrome: some View {
         ZStack {
-            secondaryBackground
-            Rectangle().fill(.ultraThinMaterial).opacity(0.25)
-            LinearGradient(colors: [.white.opacity(0.035), .clear], startPoint: .top, endPoint: .bottom)
+            Rectangle().fill(.ultraThinMaterial)
+            secondaryBackground.opacity(0.28)
+            LinearGradient(colors: [.white.opacity(0.085), .white.opacity(0.012), .black.opacity(0.13)], startPoint: .top, endPoint: .bottom)
+        }
+    }
+
+    static var pickerChrome: some View {
+        ZStack {
+            Rectangle().fill(.ultraThinMaterial)
+            secondaryBackground.opacity(0.30)
+            LinearGradient(colors: [accent.opacity(0.24), Color.black.opacity(0.42), accent.opacity(0.10)], startPoint: .leading, endPoint: .trailing)
+            LinearGradient(colors: [.white.opacity(0.085), .clear], startPoint: .top, endPoint: .bottom)
+        }
+    }
+
+    static var windowBackground: some View {
+        ZStack {
+            Rectangle().fill(.ultraThinMaterial)
+            background.opacity(0.62)
+            RadialGradient(colors: [accent.opacity(0.20), .clear], center: .topTrailing, startRadius: 8, endRadius: 250)
+            RadialGradient(colors: [accent.opacity(0.07), .clear], center: .bottomLeading, startRadius: 12, endRadius: 220)
         }
     }
 }
@@ -100,7 +118,12 @@ struct DeckWindow: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-        .background(DeckStyle.background)
+        .background(DeckStyle.windowBackground)
+        .overlay {
+            RoundedRectangle(cornerRadius: 18)
+                .strokeBorder(LinearGradient(colors: [.white.opacity(0.18), DeckStyle.accent.opacity(0.16), .white.opacity(0.055)], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1)
+                .allowsHitTesting(false)
+        }
         .preferredColorScheme(.dark)
         .tint(DeckStyle.accent)
         .sheet(isPresented: $showStatus) { statusSheet }
@@ -238,6 +261,8 @@ struct WindowFrame: NSViewRepresentable {
             guard let window, !configured else { return }
             configured = true
             window.appearance = NSAppearance(named: .darkAqua)
+            window.isOpaque = false
+            window.backgroundColor = .clear
             _ = window.setFrameAutosaveName("AgentDeck Actual Compact Window")
             _ = window.setFrameUsingName("AgentDeck Actual Compact Window")
             var frame = window.frame
