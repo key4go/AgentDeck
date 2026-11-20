@@ -2,7 +2,7 @@
 
 <img src="assets/agentdeck-icon.png" alt="SWORAX icon" width="128">
 
-SWORAX is a compact 540 × 400 native macOS whiteboard for subagents in existing Codex main chats.
+SWORAX is a compact 540 × 400 native macOS whiteboard for subagents in existing Codex main chats. SWORAX is still under very heavy development.
 
 ## Open SWORAX
 
