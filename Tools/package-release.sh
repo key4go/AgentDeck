@@ -3,9 +3,9 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 bash Tools/build-app.sh
-app=".build/AgentDeck.app"
+app=".build/SWORAX.app"
 version=$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' "$app/Contents/Info.plist")
-archive=".build/AgentDeck-${version}-macos-$(uname -m).zip"
+archive=".build/SWORAX-${version}-macos-$(uname -m).zip"
 codesign --verify --strict "$app"
 ditto -c -k --norsrc --keepParent "$app" "$archive"
 (

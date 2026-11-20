@@ -6,7 +6,7 @@ struct AgentDeckApp: App {
     @State private var store = WorkspaceStore()
 
     var body: some Scene {
-        Window("AgentDeck", id: "agent-canvas") {
+        Window("SWORAX", id: "agent-canvas") {
             DeckWindow(store: store)
                 .frame(minWidth: 540, minHeight: 340)
                 .background(WindowFrame())

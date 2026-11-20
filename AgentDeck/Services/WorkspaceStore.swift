@@ -670,7 +670,7 @@ final class WorkspaceStore {
             } else {
                 let names = WorkflowSlot.allCases.compactMap { branches[$0]?.name }.joined(separator: ", ")
                 let planRequest = """
-                Write a short handoff plan for this task. AgentDeck will send the plan to these configured agents: \(names).
+                Write a short handoff plan for this task. SWORAX will send the plan to these configured agents: \(names).
                 Return the plan without making changes or starting other agents in this planning turn.
 
                 Task:
@@ -835,7 +835,7 @@ final class WorkspaceStore {
                     }
                 } else {
                     try await client.reject(id: id)
-                    if connection == token { error = "Codex requested an interaction AgentDeck does not support." }
+                    if connection == token { error = "Codex requested an interaction SWORAX does not support." }
                 }
             } catch { report(error) }
         case .notification(let method, let params):

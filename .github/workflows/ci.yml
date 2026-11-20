@@ -25,4 +25,4 @@ jobs:
       - name: Build and verify local app bundle
         run: |
           bash Tools/build-app.sh
-          codesign --verify --strict .build/AgentDeck.app
+          codesign --verify --strict .build/SWORAX.app

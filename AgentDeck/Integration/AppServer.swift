@@ -74,7 +74,7 @@ enum ServerFailure: LocalizedError, Sendable {
         case .closed: "The Codex App Server connection closed."
         case .invalidFrame: "Codex sent an invalid or oversized protocol message."
         case .executable: "Choose an executable Codex CLI file."
-        case .unavailable: "That action requires a connected AgentDeck-managed session."
+        case .unavailable: "That action requires a connected SWORAX-managed session."
         case .busy: "Wait for the current action to finish."
         case .timeout(let method): "Codex did not answer \(method) before it timed out. Check the chat before retrying."
         case .rpc(let method, let code, let message): "\(method) (\(code)): \(message)"
@@ -160,7 +160,7 @@ actor AppServer {
                 }
             }
             let handshake = try await request("initialize", [
-                "clientInfo": ["name": "agentdeck", "title": "AgentDeck", "version": "0.6.0"],
+                "clientInfo": ["name": "agentdeck", "title": "SWORAX", "version": "0.6.0"],
                 "capabilities": ["experimentalApi": true]
             ])
             guard handshake["platformOs"].string != nil else { throw ServerFailure.invalidFrame }
@@ -202,7 +202,7 @@ actor AppServer {
     }
 
     func reject(id: WireValue) throws {
-        try write(["id": id, "error": ["code": -32601, "message": "This request is unavailable in AgentDeck."]])
+        try write(["id": id, "error": ["code": -32601, "message": "This request is unavailable in SWORAX."]])
     }
 
     func close(_ error: ServerFailure = .closed) {

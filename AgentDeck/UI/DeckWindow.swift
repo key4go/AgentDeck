@@ -178,7 +178,7 @@ struct DeckWindow: View {
                 VStack(alignment: .leading, spacing: 12) {
                     Text(store.connectionStatus).font(.subheadline.bold())
                     Text("Uses Codex’s shared local server. Open Codex before connecting.").font(.caption).foregroundStyle(.secondary)
-                    Text("AgentDeck \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "development") · Server: \(store.serverVersion)").font(.caption).foregroundStyle(.secondary)
+                    Text("SWORAX \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "development") · Server: \(store.serverVersion)").font(.caption).foregroundStyle(.secondary)
                     Text(store.executable?.path ?? "Codex executable not found")
                         .font(.caption).textSelection(.enabled)
                     HStack {

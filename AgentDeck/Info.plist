@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleDisplayName</key>
-    <string>AgentDeck</string>
+    <string>SWORAX</string>
     <key>CFBundleExecutable</key>
-    <string>AgentDeck</string>
+    <string>SWORAX</string>
     <key>CFBundleIdentifier</key>
     <string>org.agentdeck.app</string>
     <key>CFBundleInfoDictionaryVersion</key>
@@ -13,7 +13,7 @@
     <key>CFBundleIconFile</key>
     <string>AgentDeck.icns</string>
     <key>CFBundleName</key>
-    <string>AgentDeck</string>
+    <string>SWORAX</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
